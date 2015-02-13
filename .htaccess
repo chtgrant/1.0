@@ -1,0 +1,55 @@
+# compress all text & html:
+# AddOutputFilterByType DEFLATE text/html text/plain text/xml
+
+# Or, compress certain file types by extension:
+#<Files *.html>
+#SetOutputFilter DEFLATE
+#</Files>
+
+#Header unset Etag
+#FileETag none
+
+#<FilesMatch "\.(css)">
+#ForceType application/x-httpd-php
+#php_value auto_prepend_file "/home2/estratia/www/tunning/gzip-css.php"
+#</FilesMatch>
+
+#<FilesMatch "\.(js)">
+#ForceType application/x-httpd-php
+#php_value auto_prepend_file "/home2/estratia/www/tunning/gzip-js.php"
+#</FilesMatch>
+#FCKeditor/editor/fckeditor.html?InstanceName=descripcion&Toolbar=Basic
+
+#RedirectMatch 403 ^.*/site/include/php/inc/([^/\.]+)\.php$
+
+ErrorDocument 400 /index.php?body=error&error=400
+ErrorDocument 401 /index.php?body=error&error=401
+ErrorDocument 403 /index.php?body=error&error=403
+ErrorDocument 404 /index.php?body=error&error=404
+ErrorDocument 500 /index.php?body=error&error=500
+
+RewriteEngine On
+    RewriteCond %{QUERY_STRING} (preview=true)
+    RewriteRule \.(tpl|psd)$ - [NC,F]
+    RewriteRule ^(backOffice)($|/) - [L]
+    RewriteRule index.html$ index.php?body=home&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^mis-cursos/$ index.php?body=mis-datos&sTab=2&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^cursos/$ index.php?body=cursosList&type=cursos&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^conferences/$ index.php?body=cursosList&type=conferences&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^webinars/$ index.php?body=cursosList&type=webinars&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^workshops/$ index.php?body=cursosList&type=workshops&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^elearning/$ index.php?body=cursosList&type=elearning&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^management/$ index.php?body=cursosList&category=management&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^it/$ index.php?body=cursosList&category=it&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^marketing/$ index.php?body=cursosList&category=marketing&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^login/$ index.php?body=login&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^login/inscribe/([^/\.]+)/$ index.php?body=loginModal&category=inscribe&key=$1&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^([^/\.]+)/$ index.php?body=$1&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^unsuscribe/([^/\.]+)/$ index.php?body=unsuscribe&key=$1&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^suscribe/([^/\.]+)/$ index.php?body=suscribe&key=$1&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^cursos/([^/\.]+)/([^/\.]+)/$ index.php?body=curso&key=$2&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^conferences/([^/\.]+)/([^/\.]+)/$ index.php?body=curso&key=$2&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^webinars/([^/\.]+)/([^/\.]+)/$ index.php?body=curso&key=$2&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^workshops/([^/\.]+)/([^/\.]+)/$ index.php?body=curso&key=$2&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^elearning/([^/\.]+)/([^/\.]+)/$ index.php?body=curso&key=$2&%{QUERY_STRING} [NC] [OR]
+    RewriteRule ^(.*).html$ index.php?body=$1&%{QUERY_STRING} [NC] [OR]

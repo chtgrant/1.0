@@ -1,0 +1,93 @@
+dl
+{
+    width:75%;
+    margin-top:7px;
+}
+dt, dd {
+    line-height:30px;
+}
+dt:focus
+{
+     border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0 none;
+}
+.dropdown dd, .dropdown dt, .dropdown ul {
+    margin: 0;
+    padding: 0;
+}
+.dropdown dd {
+    position: relative;
+}
+.dropdown a, .dropdown a:visited {
+    color: #a7a9ac;
+    outline: medium none;
+    text-decoration: none;
+}
+.dropdown a:hover {
+    color: #5d4617;
+}
+.dropdown dt a:hover, .dropdown dt a:focus {
+    border: 1px solid #bcbec0;
+    color: #757a7d;
+}
+.dropdown dt a {
+    background: url("../images/arrowDown.png") no-repeat scroll right center #ffffff;
+    border: 1px solid #bcbec0;
+    display: block;
+    padding-right: 20px;
+    width: 94%;
+     -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+     -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+.dropdown dt a span {
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    font-family:'PT Sans',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    text-align: left;
+    font-size:16px;
+}
+.dropdown dd ul {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #bcbec0;
+    color: #c5c0b0;
+    display: none;
+    left: 0;
+    list-style: none outside none;
+    min-width: 99.5%;
+    padding: 5px 0;
+    position: absolute;
+    top: 2px;
+    width: auto;
+    z-index: 999;
+}
+.dropdown dd ul {
+    text-align: left;
+}
+.dropdown dd ul li{
+    line-height:30px;
+}
+.dropdown span.value {
+    display: none;
+}
+.dropdown dd ul li a {
+    display: block;
+    padding: 5px;
+    line-height:30px;
+}
+.dropdown dd ul li a:hover {
+    background-color: #f2f2f2;
+}
+.dropdown img.flag {
+    border: medium none;
+    float: left;
+    margin-left: 5px;
+    vertical-align: middle;
+}

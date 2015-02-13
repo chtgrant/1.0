@@ -1,0 +1,1 @@
+<img src="{$_IMG}noliked.jpg" alt="" />

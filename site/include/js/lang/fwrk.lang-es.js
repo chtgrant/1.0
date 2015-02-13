@@ -1,0 +1,15 @@
+$._LANG = new Object();
+$._LANG.YES = 'Sí';
+$._LANG.NO = 'No';
+$._LANG.loading = 'Cargando';
+$._LANG.errorSearch = 'Por favor llenar el campo de búsqueda con más de 3 letras.';
+$._LANG.passUpdated = 'Contraseña actualizada';
+$._LANG.errorPass1 = 'La contraseña debe contener al menos 6 caracteres.';
+$._LANG.errorPass2 = 'Las contraseñas deben coincidir.';
+$._LANG.infoUpdated = 'Información actualizada';
+$._LANG.addWish ='Agregar a mis favoritos';
+$._LANG.RemoveWish = 'Eliminar de mis favoritos';
+$._LANG.errorLogin = 'Acceso incorrecto';
+$._LANG.errorUser1 = 'No existe el usuario.';
+$._LANG.passSent = 'Contraseña enviada.';
+$._LANG.pendingReq = 'Solicitud pendiente.';

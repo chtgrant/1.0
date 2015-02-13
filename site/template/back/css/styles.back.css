@@ -1,0 +1,113 @@
+ .fl{float:left;}
+ .fr{float:right;}
+ .cl{clear:both;}
+ .cp{cursor:pointer;}
+ .tablebg
+ {
+ 	min-height:100px;
+ 	height:auto;
+ 	display:inline-block;
+ 	width:100%;
+ }
+.btnAdd
+{
+	float:right;
+	margin:0;
+}
+.cal-name
+{
+	width:100px;
+	float:left;
+	padding: 4px 0 0 0;
+}
+.cal-month
+{
+	border-radius:5px;
+	float:right;
+	width:30px;
+	height:30px;
+	margin:0 2px;
+	font-size:11px;
+	line-height:14px;
+	text-align:center;
+}
+.cal-month a
+{
+	color:#FFF;
+	text-decoration: none;
+}
+.cal-status
+{
+	padding:9px;
+	margin:0 10px 0;
+}
+.cal-med
+{
+	padding:9px;
+	margin:0 10px 0;
+}
+.cal-arrow-down
+{
+	margin:0 auto;
+}
+.btn-p
+{
+	padding: 6px 12px !important;
+}
+.btn-f
+{
+	z-index:3;
+	margin:7px !important;
+}
+.label-btn
+{
+	margin-bottom:2px !important;
+}
+.imgAction
+{
+	margin:7px 3px 3px;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+#wSelection
+{
+	margin:-10px 15px;
+	height:0;
+	overflow:hidden;
+}
+.ml10{margin-left:10px;}
+.ml20{margin-left:20px;}
+.ml30{margin-left:30px;}
+.ml40{margin-left:40px;}
+
+div.has-error a.select2-choice {
+  border-color: rgb(185, 74, 72) !important;
+  background: none repeat scroll 0 0 #fff0f0;
+}
+div.info-msg-m
+{
+	width:99%;
+	margin:10px auto 0 !important;
+}
+.popover
+{
+	max-width: 370px;
+}
+
+#back-to-top {
+    bottom: 20px;
+    display: none;
+    position: fixed;
+    right: 20px;
+    z-index: 1000;
+}
+#back-to-top a {
+    background: url("../images/backtotop.png") no-repeat scroll center center #515A5F;
+    border-radius: 100px;
+    display: block;
+    height: 40px;
+    text-indent: -9999px;
+    transition: all 0.2s linear 0s;
+    width: 40px;
+}
